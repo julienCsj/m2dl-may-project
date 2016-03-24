@@ -10,6 +10,6 @@ Lien vers le [sujet moodle](http://moodle.univ-tlse3.fr/pluginfile.php/205194/mo
  ![SpeADL](https://media.giphy.com/media/fT2FmxvHVvYDC/giphy.gif)
 
 ## Contacts
-* Julien CustojaH
+* Julien Custoja
 * Elliot Felgines
 * Léo Mieulet
