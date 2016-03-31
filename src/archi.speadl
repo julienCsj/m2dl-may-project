@@ -1,0 +1,60 @@
+namespace OCTest {
+	
+	component C_Client {
+		requires fastlane : IFastLane
+		requires lane : ILane
+		requires consult : IConsult 
+	}
+	
+	component C_Store {
+		provides fastlane : IFastLane
+		provides lane : ILane
+		provides consult : IConsult
+		requires provider : IProvider
+		requires transfer : ITransfer
+	}
+	
+	component C_Provider {
+		provides transfer : ITransfer
+	}
+	
+	component C_Desk {
+		provides transfer : ITransfer
+		
+		requires adminE : IAdmin
+		requires accountE : IAccount
+		
+		requires adminA : IAdmin
+		requires accountA : IAccount
+		
+		requires adminB : IAdmin
+		requires accountB : IAccount
+	}
+	
+	component C_Account {
+		provides admin : IAdmin
+		provides account : IAccount
+	}
+	
+	component C_Bank {
+		provides transfer : ITransfer = desk.transfer
+		
+		part estore : C_Account
+		part bob : C_Account
+		part anne : C_Account
+		
+		part desk  : C_Desk {
+			bind adminE to estore.admin
+			bind accountE to estore.account
+			
+			bind adminA to anne.admin
+			bind accountA to anne.account
+			
+			bind adminB to bob.admin
+			bind accountB to bob.account
+		}
+		 
+	}
+	
+	
+}
