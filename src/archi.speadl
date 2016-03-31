@@ -1,6 +1,18 @@
 namespace OCTest {
 	
-	component C_Client {
+	// Composant de log
+	component Logger {}
+	
+	// Pour visualiser un agent
+	component Visualiseur {}
+	
+	// Un agent
+	component Agent {}
+	
+	// Pour enregistrer les états et les charger
+	component Enregistreur {}
+	
+	/*component C_Client {
 		requires fastlane : IFastLane
 		requires lane : ILane
 		requires consult : IConsult 
@@ -54,7 +66,7 @@ namespace OCTest {
 			bind accountB to bob.account
 		}
 		 
-	}
+	}*/
 	
 	
 }
