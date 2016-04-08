@@ -1,12 +1,12 @@
-namespace OCTest {
+namespace Agent {
 	
 	// Composant de log
-	component Logger {}
+	component Salle {}
 	
 	// Pour visualiser un agent
-	component Visualiseur {}
+	component Prof {}
 		
 	// Pour enregistrer les états et les charger
-	component Enregistreur {}
+	component Etudiant {}
 			
 }
